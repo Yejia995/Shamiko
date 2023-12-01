@@ -4,7 +4,6 @@ A minimal tile switch for Shamiko whitelist.
 
 ### Build
 ```
-git clone https://github.com/Yejia995/Shamiko
 chmod +x gradlew
 sh gradlew build
 ```
