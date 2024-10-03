@@ -29,4 +29,4 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@main
       with:
-        path: app/build/outputs/apk
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
