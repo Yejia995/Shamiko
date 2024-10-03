@@ -29,4 +29,15 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@main
       with:
-        path: app/build/outputs/apk/release/app-release-unsigned.apk
+        path: app/build/outputs/apk
+
+    - name: Upload to Releases
+      uses: svenstaro/upload-release-action@v2
+      with:
+        overwrite: true
+        tag: ${{ github.ref }}
+        release_name: Build CI
+        asset_name: app-release-unsigned.apk
+        repo_token: ${{ secrets.ACCESS_TOKEN }}
+        body: "Automated release issued by Actions."
+        file: app/build/outputs/apk/release/app-release-unsigned.apk
